@@ -296,37 +296,66 @@ fn main() {
     // let first = arr[0];
     // println!("first: {}", first);
 
-    let months: [&str; 12] = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-    ];
-    println!("Enter a number between 1 and 12");
+    // let months: [&str; 12] = [
+    //     "January",
+    //     "February",
+    //     "March",
+    //     "April",
+    //     "May",
+    //     "June",
+    //     "July",
+    //     "August",
+    //     "September",
+    //     "October",
+    //     "November",
+    //     "December",
+    // ];
+    // println!("Enter a number between 1 and 12");
 
     // for month in months.iter() {
     //     println!("{}", month);
     // }
-    let mut index: String = String::new();
-    io::stdin()
-        .read_line(&mut index)
-        .expect("Failed to read line");
+    // let mut index: String = String::new();
+    // io::stdin()
+    //     .read_line(&mut index)
+    //     .expect("Failed to read line");
 
-    let index: usize = index
-        .trim()
-        .parse()
-        .expect("Index entered was not a number");
+    // let index: usize = index
+    //     .trim()
+    //     .parse()
+    //     .expect("Index entered was not a number");
 
-    let value: &str = months[index];
-    println!("The value of the index is: {}", value);
+    // let value: &str = months[index];
+    // println!("The value of the index is: {}", value);
+    another_function(5);
+    print_labeled_measurement(5, 'm');
+
+    let mut x: i32 = five();
+    // x = x + 1;
+    println!("The value of x is: {}", x);
+
+    let y: i32 = plus_one(x);
+    println!("The value of y is: {}", y);
+}
+
+// FUNCTIONS::
+
+fn another_function(x: i32) {
+    println!("The value of x is: {}", x);
+}
+
+fn print_labeled_measurement(value: i32, unit_label: char) {
+    println!("The measurement is: {value} {unit_label}");
+}
+
+// Function with return type
+
+fn five() -> i32 {
+    5
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
 }
 
 // fn arithmetic() {
@@ -349,4 +378,5 @@ fn main() {
 //     // remainder
 //     let remainder: i32 = 43 % 5;
 //     println!("remainder: {}", remainder);
+
 // }
